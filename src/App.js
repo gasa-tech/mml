@@ -1,24 +1,22 @@
-import logo from './logo.svg';
+import React from "react";
 import './App.css';
-
+import Home from "./components/pages/Home";
+import About from "./components/pages/About";
+import Contact from "./components/pages/Contact";
+import Navbar from "./components/includes/Navbar";
+import Footer from "./components/includes/Footer";
+import {BrowserRouter as Router,Route} from "react-router-dom";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Case sensitive siya bantog mo error pag compile
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          SORRY HA!
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div> 
+        <Navbar/>
+        <Route exact path='/' component={Home} />
+        <Route exact path='/about' component={About} />
+        <Route exact path='/contact' component={Contact} />
+        <Footer/>
+      </div>
+    </Router>
   );
 }
 
