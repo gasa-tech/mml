@@ -2,7 +2,7 @@ import React from "react";
 import {Link} from "react-router-dom";
 function Navbar(){
     return(
-        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark py-4" >
             <div class="container">
                 <Link class="navbar-brand text-white" to="/">MML LOGO</Link>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
